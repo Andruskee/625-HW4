@@ -1,0 +1,12 @@
+#!/bin/bash -l
+#SBATCH --job-name=matrixMul
+#SBATCH --time=0-1:00:00
+#SBATCH --ntasks-per-node=1
+#SBATCH --nodes=1
+#SBATCH --mem=1G
+#SBATCH --gres=gpu:1
+
+## module load magma
+## make
+
+/homes/neilsen/625/CUDA/hwk4/hwk4/matrixMul

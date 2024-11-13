@@ -1,0 +1,13 @@
+#!/bin/bash -l
+#SBATCH --job-name=multiply
+#SBATCH --time=0-1:00:00
+#SBATCH --ntasks-per-node=1
+#SBATCH --nodes=1
+#SBATCH --mem=1G
+##SBATCH --constraint=dwarves
+#SBATCH --gres=gpu:1
+
+## module load magma
+## nvcc -o multiply multiply.cu
+
+/homes/neilsen/625/CUDA/hwk4/multiply 600 500 400
